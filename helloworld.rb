@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'pg'
+require 'newrelic_rpm'
+require 'newrelic/infinite_tracing'
     
 set :port, 4000
 set :bind, '0.0.0.0'
