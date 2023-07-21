@@ -17,9 +17,14 @@ get '/' do
         puts 'Successfully created connection to database.'
     
         resultSet = connection.exec('SELECT * from demotable;')
+        outStr = "<table><tr><th>id</th><th>name</th></tr>"
         resultSet.each do |row|
             puts 'Data row = (%s, %s)' % [row['id'], row['name']]
+            row_data = "<tr><td>#{row['id']}</td><td>#{row['name']}}</td></tr>"
+            outStr += "#{row_data}"
         end
+        outStr += "</table>"
+        outStr
     
     rescue PG::Error => e
         puts e.message
@@ -27,5 +32,4 @@ get '/' do
     ensure
         connection.close if connection
     end
-    'Hello World!'
 end
