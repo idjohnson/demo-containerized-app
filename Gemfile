@@ -11,3 +11,7 @@ gem "sinatra"
 
 gem 'newrelic_rpm'
 gem 'newrelic-infinite_tracing'
+
+gem 'rack'
+gem 'zipkin-tracer'
+

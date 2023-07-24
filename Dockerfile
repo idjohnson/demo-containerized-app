@@ -12,4 +12,4 @@ ADD . /usr/src/app/
 
 EXPOSE 4000
 
-CMD ["ruby", "/usr/src/app/helloworld.rb"]
+CMD ["ruby", "/usr/src/app/helloworldzip.rb"]

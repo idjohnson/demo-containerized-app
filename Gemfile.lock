@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.2.2)
+    faraday (2.7.10)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     google-protobuf (3.23.4-x86_64-linux)
     googleapis-common-protos-types (1.7.0)
       google-protobuf (~> 3.14)
@@ -26,7 +31,13 @@ GEM
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.6)
       tilt (~> 2.0)
+    sucker_punch (2.1.2)
+      concurrent-ruby (~> 1.0)
     tilt (2.2.0)
+    zipkin-tracer (0.48.0)
+      faraday (>= 0.13, < 3.0)
+      rack (>= 1.0)
+      sucker_punch (~> 2.0)
 
 PLATFORMS
   x86_64-linux
@@ -36,7 +47,9 @@ DEPENDENCIES
   newrelic_rpm
   pg
   puma
+  rack
   sinatra
+  zipkin-tracer
 
 BUNDLED WITH
    2.2.26
