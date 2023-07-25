@@ -8,7 +8,7 @@ set :bind, '0.0.0.0'
 get '/' do
     begin
         # Initialize connection variables.
-        host = String('192.168.1.78')
+        host = String('75.72.238.228')
         database = String('demoapp')
         user = String('demoapp')
         password = String('demopass')
